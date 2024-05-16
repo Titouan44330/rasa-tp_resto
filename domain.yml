@@ -59,6 +59,9 @@ responses:
   utter_ok_annule_resa:
   - text: "Votre réservation {code_resa}"
 
+  utter_resa_ko_valid:
+  - text: "Nous n'avons pas de table disponible pour {nb_personne} le {date}"
+
   utter_annule_ko:
   - text: "Voulez-vous vraiment annuler ?"
 
