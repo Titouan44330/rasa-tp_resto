@@ -86,15 +86,6 @@ responses:
   utter_lien_carte:
   - text: "Le lien de la carte : ."
 
-
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
 entities:
   - ville
   - date_resa
