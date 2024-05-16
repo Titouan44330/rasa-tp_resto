@@ -31,7 +31,7 @@ responses:
   - text: "Très bien, commençons une réservation ! Vous pouvez annuler votre démarche à tout moment en écrivant 'stop'. Pour quelle date souhaitez-vous réserver ?"
 
   utter_date_resa_ask_nb_pers:
-  - text: "Le ? , pour combien de personnes ?"
+  - text: "Le {date_resa}, pour combien de personnes ?"
 
   utter_resa_ask_confirm:
   - text: "Veuillez confirmer la réservation du {date_resa} pour {nb_personne}. Ok ?"
@@ -91,7 +91,6 @@ responses:
   - text: "Le lien de la carte : ."
 
 entities:
-  - ville
   - date_resa
   - nb_personne
   - nom_resa
@@ -101,12 +100,6 @@ entities:
   - nouv_com
 
 slots:
-  ville:
-    type: text
-    influence_conversation: false
-    mappings:
-    - type: from_entity
-      entity: ville
   date_resa:
     type: text
     influence_conversation: false
