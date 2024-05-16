@@ -20,25 +20,25 @@ responses:
   - text: "Très bien, commençons une réservation ! Pour quelle date souhaitez-vous réserver ?"
 
   utter_date_resa_ask_nb_pers:
-  - text: "Le {date}, pour combien de personnes ?"
+  - text: "Le {date_resa}, pour combien de personnes ?"
 
   utter_resa_ask_confirm:
-  - text: "Veuillez confirmer la réservation du {date} pour {nb_personne}. Ok ?"
+  - text: "Veuillez confirmer la réservation du {date_resa} pour {nb_personne}. Ok ?"
   
   utter_confirm_resa_ask_nom:
   - text: "A quel nom souhaitez-vous réserver ?"
 
   utter_nom_resa_confirm_ask_num:
-  - text: "Merci de donner un numéro de téléphone associé à la réservation {nom}."
+  - text: "Merci de donner un numéro de téléphone associé à la réservation {nom_resa}."
 
   utter_confirm_num_resa_add_com:
   - text: "Ajoutez un commentaire à votre réservation : "
 
   utter_confirm_resa:
-  - text: "Veuillez confirmer la réservation du {date} pour {nb_personne} au nom de {nom} num tel : {num_tel} avec le commentaire : {com}. Ok ?"
+  - text: "Veuillez confirmer la réservation du {date_resa} pour {nb_personne} au nom de {nom_resa} et numéro de tel : {num_resa} avec le commentaire : {commentaire}. Ok ?"
 
   utter_au_revoir:
-  - text: "Veuillez confirmer la réservation du {date} pour {nb_personne}. Ok ?"
+  - text: "Votre réservation est bien prise en compte ! Merci."
 
 
   utter_cheer_up:
@@ -50,10 +50,11 @@ responses:
 
 entities:
   - ville
-  - date
+  - date_resa
   - nb_personne
-  - num_tel
-  - com
+  - nom_resa
+  - num_resa
+  - commentaire
 
 slots:
   ville:
@@ -62,30 +63,36 @@ slots:
     mappings:
     - type: from_entity
       entity: ville
-  date:
+  date_resa:
     type: text
     influence_conversation: false
     mappings:
     - type: from_entity
-      entity: date
+      entity: date_resa
   nb_personne:
     type: text
     influence_conversation: false
     mappings:
     - type: from_entity
       entity: nb_personne
-  num_tel:
+  nom_resa:
     type: text
     influence_conversation: false
     mappings:
     - type: from_entity
-      entity: num_tel
-  com:
+      entity: nom_resa
+  num_resa:
     type: text
     influence_conversation: false
     mappings:
     - type: from_entity
-      entity: com
+      entity: num_resa
+  commentaire:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: commentaire
 
 session_config:
   session_expiration_time: 60
