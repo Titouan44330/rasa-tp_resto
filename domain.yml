@@ -31,7 +31,7 @@ responses:
   - text: "Très bien, commençons une réservation ! Vous pouvez annuler votre démarche à tout moment en écrivant 'stop'. Pour quelle date souhaitez-vous réserver ?"
 
   utter_date_resa_ask_nb_pers:
-  - text: "Le {date_resa}, pour combien de personnes ?"
+  - text: "Le ? , pour combien de personnes ?"
 
   utter_resa_ask_confirm:
   - text: "Veuillez confirmer la réservation du {date_resa} pour {nb_personne}. Ok ?"
