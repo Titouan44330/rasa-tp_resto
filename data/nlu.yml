@@ -20,7 +20,7 @@ nlu:
 ############################### COMMUN ############################################
 
 - intent: bonjour
-  exemples: |
+  examples: |
     - bonjour
     - Coucou
     - Salut
@@ -45,7 +45,7 @@ nlu:
     - je voudrais réserver une table
     - j'aimerai manger à votre restaurant
 
--intent: date_resa
+- intent: date_resa
   examples: |
     - Le [15/02/2024](date_resa)
     - [15/06/2025](date_resa)
@@ -89,7 +89,7 @@ nlu:
 
 
 ############################### story annule_resa ############################################
-intent: annule_resa
+- intent: annule_resa
   examples: |
     - J'aimerai annuler ma reservation
 
