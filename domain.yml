@@ -1,33 +1,61 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
+  - bonjour
+  - demande_resa
+  - date_resa
+  - demande_nb_pers
   - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - valid_resa
+  - nom_resa
+  - num_resa
+  - com_resa
+  - au_revoir
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_bonjour:
+  - text: "Bonjour, que puis-je faire pour vous ?"
+
+  utter_start_resa_ask_date:
+  - text: "Très bien, commençons une réservation ! Pour quelle date souhaitez-vous réserver ?"
+
+  utter_date_resa_ask_nb_pers:
+  - text: "Le {date}, pour combien de personnes ?"
+
+  utter_resa_ask_confirm:
+  - text: "Veuillez confirmer la réservation du {date} pour {nb_personne}. Ok ?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+entities:
+  - ville
+  - date
+  - nb_personne
+
+slots:
+  ville:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: ville
+  date:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: date
+  nb_personne:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: nb_personne
 
 session_config:
   session_expiration_time: 60
