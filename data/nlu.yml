@@ -17,12 +17,25 @@ nlu:
     - goodevening
     - good afternoon
 
+############################### COMMUN ############################################
+
 - intent: bonjour
   exemples: |
     - bonjour
     - Coucou
     - Salut
     - Bien le bonjour
+
+- intent: au_revoir  
+  examples: |
+    - au revoir
+    - à bientôt
+    - à plus
+    - à une prochaine fois
+
+############################### END COMMUN ############################################
+
+
 
 ############################### story new_resa_ok/ko ############################################
   
@@ -72,18 +85,7 @@ nlu:
     - [Je suis en fauteuil roulant](commentaire)
     - [C'est l'anniversaire de mon conjoint](commentaire)
 
-- intent: au_revoir  
-  examples: |
-    - au revoir
-    - à bientôt
-    - à plus
-    - à une prochaine fois
-
 ############################### END story new_resa_ok ############################################
-
-
-
-
 
 
 ############################### story annule_resa ############################################
@@ -95,32 +97,87 @@ intent: annule_resa
   examples: |
     - [123456](code_resa)
     - mon code est [56535463](code_resa)
+
+- intent: code_resa_ko
+  examples: |
+    - [sdgfhfghf](code_resa)
+    - [deslettres](code_resa)
+    - [un mauvais code](code_resa)
+
+- intent: confirm_annule_ok
+  examples: |
+    - Oui
+
+- intent: confirm_annule_ko
+  examples: |
+    - Non
+
 ############################### END story annule_resa ############################################
 
 
 
+############################### story info_resa ############################################
 
-
-
-############################### story annule_resa_ok_confirm_ok ############################################
-- intent: confirm_annule_ok
+- intent: info_resa
   examples: |
-    - OUI
-    - Oui
-    - oui
-############################### END story annule_resa_ok ############################################
+    - J'aimerai avoir les informations de ma reservation
+    - Info reservation
+    - information
+    - Informations sur ma reservation
 
-
-
-
-
-
-
-
-############################### story annule_resa_ok_confirm_ko ############################################
-- intent: confirm_annule_ko
+- intent: code_resa_ok
   examples: |
-    - NON
-    - non
-    - Non
-############################### END story annule_resa_ok ############################################
+    - [0556154](code_resa)
+    - [96546856765](code_resa)
+    - [051202](code_resa)
+
+- intent: modif_com_resa
+  examples: |
+    - J'aimerai modifier ma réservation
+    - Modification de la réservation
+    - Modifier réservation
+
+- intent: nouv_com_resa
+  examples: |
+    - Je suis allergique à la céramique, la cacahuète, les nouilles et la redbull
+    - il y aura 1 personne de plus
+    - servez moi des cacahuètes avec mon ricard
+
+- intent: code_resa_ko
+  examples: |
+    - [sdgfhfghf](code_resa)
+    - [deslettres](code_resa)
+    - [un mauvais code](code_resa)
+
+############################### END story info_resa ############################################
+
+############################### story resto_menu_jour ############################################
+
+- intent: info_menu
+  examples: |
+    - J'aimerai voir le menu du jour
+    - Menu du jour
+    - menu
+
+############################### END story resto_menu_jour ############################################
+
+############################### story resto_allergenes ############################################
+
+- intent: info_allergenes
+  examples: |
+    - Est il possible d'obtenir la liste des allergènes
+    - Allergènes
+    - les allergenes
+
+############################### END story resto_menu_jour ############################################
+
+############################### story resto_menu_jour ############################################
+
+- intent: info_carte
+  examples: |
+    - Pourrais je voir la carte du restaurant
+    - Menu
+    - Carte
+    - j'aimerai voir ka carte du resto
+
+############################### END story resto_menu_jour ############################################
