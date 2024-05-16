@@ -50,6 +50,30 @@ responses:
   utter_au_revoir:
   - text: "Merci et à bientôt."
 
+  utter_demande_code_resa:
+  - text: "Pouvez-vous me fournir votre code de réservation afin d'annuler votre séjour ?"
+
+  utter_annule_ok:
+  - text: "Êtes-vous sûr d'annuler votre réservation ?"
+
+  utter_ok_annule_resa:
+  - text: "Votre réservation {code_resa}"
+
+  utter_annule_ko:
+  - text: "Voulez-vous vraiment annuler ?"
+
+  utter_ko_annule_resa:
+  - text: "Abandon de l'annulation de votre réservation."
+
+  utter_info_ok:
+  - text: "Voici vos informations : ."
+
+  utter_oui_non_modif:
+  - text: "Souhaitez vous modifier votre commentaire concernant votre réservation ?"
+
+  utter_confirm_modif_resa:
+  - text: "Votre commentaire a bien été enregistré."
+
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -65,6 +89,8 @@ entities:
   - nom_resa
   - num_resa
   - commentaire
+  - code_resa
+  - nouv_com
 
 slots:
   ville:
@@ -103,6 +129,18 @@ slots:
     mappings:
     - type: from_entity
       entity: commentaire
+  code_resa:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: code_resa
+  nouv_com:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: nouv_com
 
 session_config:
   session_expiration_time: 60
