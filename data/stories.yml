@@ -2,7 +2,8 @@ version: "3.1"
 
 stories:
 
-- story: new_resa
+- story: new_resa_ok
+  steps:
   - intent: bonjour
   - action: utter_bonjour
   - intent: demande_resa
@@ -10,9 +11,6 @@ stories:
   - intent: date_resa
   - action: utter_date_resa
   - intent: demande_nb_pers
-
-- story: new_resa_ok
-  steps:
   - action: utter_resa_ok_valid
   - intent: valid_resa
   - action: utter_confirm_resa
@@ -27,45 +25,61 @@ stories:
 
 - story: new_resa_ko
   steps:
+  - intent: bonjour
+  - action: utter_bonjour
+  - intent: demande_resa
+  - action: utter_start_resa
+  - intent: date_resa
+  - action: utter_date_resa
+  - intent: demande_nb_pers
   - action: utter_resa_ko_valid
   - intent: au_revoir
   - action: utter_au_revoir
 
-- story: annule_resa
+- story: annule_resa_ok_confirm_ok
   steps:
   - intent: bonjour
   - action: utter_bonjour
   - intent: annule_resa
   - action: utter_demande_code_resa
   - intent: code_resa_annule
-
-- story: annule_resa_ok
-steps:   
   - action: utter_annule_ok
   - intent: confirm_annule_ok
   - action: utter_ok_annule_resa
   - intent: au_revoir
   - action: utter_au_revoir
 
-- story: annule_resa_ko
+- story: annule_resa_ok_confirm_ko
   steps:
+  - intent: bonjour
+  - action: utter_bonjour
+  - intent: annule_resa
+  - action: utter_demande_code_resa
+  - intent: code_resa_annule
   - action: utter_annule_ko
   - intent: confirm_annule_ko
   - action: utter_ko_annule_resa
   - intent: au_revoir
   - action: utter_au_revoir
 
-- story: info_resa
+- story: annule_resa_ko
+  steps:
+  - intent: bonjour
+  - action: utter_bonjour
+  - intent: annule_resa
+  - action: utter_demande_code_resa
+  - intent: code_resa_ko
+  - action: utter_annule_ko
+  - intent: au_revoir
+  - action: utter_au_revoir
+
+- story: info_resa_ok
   steps:
   - intent: bonjour
   - action: utter_bonjour
   - intent: info_resa
   - action: utter_demande_code_resa
-  - intent: code_resa
-
-
-- story: info_resa_ok
-  steps:
+  - intent: code_resa_ok
   - action: utter_info_ok
   - intent: modif_com_resa
   - action: utter_oui_non_modif
@@ -74,8 +88,14 @@ steps:
   - intent: au_revoir
   - action: utter_au_revoir
 
+
 - story: info_resa_ko
   steps:
+  - intent: bonjour
+  - action: utter_bonjour
+  - intent: info_resa
+  - action: utter_demande_code_resa
+  - intent: code_resa_ko
   - action: utter_info_ko
   - intent: au_revoir
   - action: utter_au_revoir
