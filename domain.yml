@@ -5,19 +5,29 @@ intents:
   - demande_resa
   - date_resa
   - demande_nb_pers
-  - mood_great
   - valid_resa
   - nom_resa
   - num_resa
   - com_resa
   - au_revoir
+  - annule_resa
+  - code_resa_annule
+  - confirm_annule_ok
+  - code_resa_ko
+  - info_resa
+  - code_resa_ok
+  - modif_com_resa
+  - nouv_com_resa
+  - info_menu
+  - info_allergenes
+  - info_carte
 
 responses:
   utter_bonjour:
   - text: "Bonjour, que puis-je faire pour vous ?"
 
   utter_start_resa_ask_date:
-  - text: "Très bien, commençons une réservation ! Pour quelle date souhaitez-vous réserver ?"
+  - text: "Très bien, commençons une réservation ! Vous pouvez annuler votre démarche à tout moment en écrivant "stop". Pour quelle date souhaitez-vous réserver ?"
 
   utter_date_resa_ask_nb_pers:
   - text: "Le {date_resa}, pour combien de personnes ?"
@@ -35,10 +45,10 @@ responses:
   - text: "Ajoutez un commentaire à votre réservation : "
 
   utter_confirm_resa:
-  - text: "Veuillez confirmer la réservation du {date_resa} pour {nb_personne} au nom de {nom_resa} et numéro de tel : {num_resa} avec le commentaire : {commentaire}. Ok ?"
+  - text: "Votre réservation du {date_resa} pour {nb_personne} au nom de {nom_resa} et numéro de tel : {num_resa} avec le commentaire : {commentaire} est bien prise en compte."
 
   utter_au_revoir:
-  - text: "Votre réservation est bien prise en compte ! Merci."
+  - text: "Merci et à bientôt."
 
 
   utter_cheer_up:

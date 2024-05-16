@@ -28,9 +28,9 @@ stories:
   - intent: bonjour
   - action: utter_bonjour
   - intent: demande_resa
-  - action: utter_start_resa
+  - action: utter_start_resa_ask_date
   - intent: date_resa
-  - action: utter_date_resa
+  - action: utter_date_resa_ask_nb_pers
   - intent: demande_nb_pers
   - action: utter_resa_ko_valid
   - intent: au_revoir
