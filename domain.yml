@@ -1,105 +1,80 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - bonjour
-  - demande_resa
-  - date_resa
-  - demande_nb_pers
-  - valid_resa
-  - nom_resa
-  - num_resa
-  - com_resa
-  - au_revoir
-  - annule_resa
-  - code_resa_annule
-  - confirm_annule_ok
-  - code_resa_ko
-  - info_resa
-  - code_resa_ok
-  - modif_com_resa
-  - nouv_com_resa
-  - info_menu
-  - info_allergenes
-  - info_carte
-  - confirm_annule_ko
-
+- annule_resa
+- au_revoir
+- bonjour
+- code_resa_annule
+- code_resa_ko
+- code_resa_ok
+- com_resa
+- confirm_annule_ko
+- confirm_annule_ok
+- date_resa
+- demande_nb_pers
+- demande_resa
+- info_allergenes
+- info_carte
+- info_menu
+- info_resa
+- modif_com_resa
+- nom_resa
+- nouv_com_resa
+- num_resa
+- valid_resa
 responses:
   utter_bonjour:
-  - text: "Bonjour, que puis-je faire pour vous ?"
-
+  - text: Bonjour, que puis-je faire pour vous ?
   utter_start_resa_ask_date:
-  - text: "Très bien, commençons une réservation ! Vous pouvez annuler votre démarche à tout moment en écrivant 'stop'. Pour quelle date souhaitez-vous réserver ?"
-
+  - text: Très bien, commençons une réservation ! Vous pouvez annuler votre démarche à tout moment en écrivant 'stop'. Pour quelle date souhaitez-vous réserver ?
   utter_date_resa_ask_nb_pers:
-  - text: "Le ? , pour combien de personnes ?"
-
+  - text: Le ? , pour combien de personnes ?
   utter_resa_ask_confirm:
-  - text: "Veuillez confirmer la réservation du {date_resa} pour {nb_personne}. Ok ?"
-  
+  - text: Veuillez confirmer la réservation du {date_resa} pour {nb_personne}. Ok ?
   utter_confirm_resa_ask_nom:
-  - text: "A quel nom souhaitez-vous réserver ?"
-
+  - text: A quel nom souhaitez-vous réserver ?
   utter_nom_resa_confirm_ask_num:
-  - text: "Merci de donner un numéro de téléphone associé à la réservation {nom_resa}."
-
+  - text: Merci de donner un numéro de téléphone associé à la réservation {nom_resa}.
   utter_confirm_num_resa_add_com:
-  - text: "Ajoutez un commentaire à votre réservation : "
-
+  - text: 'Ajoutez un commentaire à votre réservation : '
   utter_confirm_resa:
-  - text: "Votre réservation du {date_resa} pour {nb_personne} au nom de {nom_resa} et numéro de tel : {num_resa} avec le commentaire : {commentaire} est bien prise en compte."
-
+  - text: 'Votre réservation du {date_resa} pour {nb_personne} au nom de {nom_resa} et numéro de tel : {num_resa} avec le commentaire : {commentaire} est bien prise en compte.'
   utter_au_revoir:
-  - text: "Merci et à bientôt."
-
+  - text: Merci et à bientôt.
   utter_demande_code_resa:
-  - text: "Pouvez-vous me fournir votre code de réservation afin d'annuler votre séjour ?"
-
+  - text: Pouvez-vous me fournir votre code de réservation afin d'annuler votre séjour ?
   utter_annule_ok:
-  - text: "Êtes-vous sûr d'annuler votre réservation ?"
-
+  - text: Êtes-vous sûr d'annuler votre réservation ?
   utter_ok_annule_resa:
-  - text: "Votre réservation {code_resa}"
-
+  - text: Votre réservation {code_resa}
   utter_resa_ko_valid:
-  - text: "Nous n'avons pas de table disponible pour {nb_personne} le {date}"
-
+  - text: Nous n'avons pas de table disponible pour {nb_personne} le {date}
   utter_annule_ko:
-  - text: "Voulez-vous vraiment annuler ?"
-
+  - text: Voulez-vous vraiment annuler ?
   utter_ko_annule_resa:
-  - text: "Abandon de l'annulation de votre réservation."
-
+  - text: Abandon de l'annulation de votre réservation.
   utter_info_ok:
-  - text: "Voici vos informations : ."
-
+  - text: 'Voici vos informations : .'
   utter_oui_non_modif:
-  - text: "Souhaitez vous modifier votre commentaire concernant votre réservation ?"
-
+  - text: Souhaitez vous modifier votre commentaire concernant votre réservation ?
   utter_confirm_modif_resa:
-  - text: "Votre commentaire a bien été enregistré."
-
+  - text: Votre commentaire a bien été enregistré.
   utter_info_ko:
-  - text: "Aucune réservation ne correspond à votre saisie"
-
+  - text: Aucune réservation ne correspond à votre saisie
   utter_info_menu:
-  - text: "Le menu est : ."
-
+  - text: 'Le menu est : .'
   utter_info_allergenes:
-  - text: "Les allergènes sont : ."
-
+  - text: 'Les allergènes sont : .'
   utter_lien_carte:
-  - text: "Le lien de la carte : ."
-
+  - text: 'Le lien de la carte : .'
 entities:
-  - ville
-  - date_resa
-  - nb_personne
-  - nom_resa
-  - num_resa
-  - commentaire
-  - code_resa
-  - nouv_com
-
+- date_resa
+- num_resa
+- ville
+- nb_personne
+- nom_resa
+- commentaire
+- code_resa
+- nouv_com
 slots:
   ville:
     type: text
@@ -149,7 +124,11 @@ slots:
     mappings:
     - type: from_entity
       entity: nouv_com
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+actions:
+- utter_date_resa_ask_nb_pers
+- utter_bonjour
+- utter_start_resa_ask_date
+- utter_resa_ask_confirm

@@ -9,16 +9,26 @@ stories:
   - intent: demande_resa
   - action: utter_start_resa_ask_date
   - intent: date_resa
+    entities :
+      - date: "demain"
   - action: utter_date_resa_ask_nb_pers
   - intent: demande_nb_pers
+    entities :
+      - nb_pers: "2"
   - action: utter_resa_ask_confirm
   - intent: valid_resa
   - action: utter_confirm_resa_ask_nom
   - intent: nom_resa
+    entities: 
+      - nom_resa: "Titouan"
   - action: utter_nom_resa_confirm_ask_num
   - intent: num_resa
+    entities:
+      - num_resa: "123456789"
   - action: utter_confirm_num_resa_add_com
   - intent: com_resa
+    entities:
+      - com_resa: "Je suis alergique aux fruits à coque"
   - action: utter_confirm_resa
   - intent: au_revoir
   - action: utter_au_revoir
@@ -28,10 +38,16 @@ stories:
   - intent: bonjour
   - action: utter_bonjour
   - intent: demande_resa
+    entities :
+      - date: "demain"
   - action: utter_start_resa_ask_date
   - intent: date_resa
+    entities :
+      - date: "demain"
   - action: utter_date_resa_ask_nb_pers
   - intent: demande_nb_pers
+    entities :
+      - nb_pers: "2"
   - action: utter_resa_ko_valid
   - intent: au_revoir
   - action: utter_au_revoir
@@ -43,6 +59,8 @@ stories:
   - intent: annule_resa
   - action: utter_demande_code_resa
   - intent: code_resa_annule
+    entities:
+      - code_resa: "123456"
   - action: utter_annule_ok
   - intent: confirm_annule_ok
   - action: utter_ok_annule_resa
@@ -129,3 +147,25 @@ stories:
 
 
 
+
+- story: interactive_story_1
+  steps:
+  - intent: bonjour
+  - action: utter_bonjour
+  - intent: demande_resa
+  - action: utter_start_resa_ask_date
+  - intent: date_resa
+    entities:
+    - date_resa: demain
+  - slot_was_set:
+    - date_resa: demain
+  - action: utter_date_resa_ask_nb_pers
+  - intent: num_resa
+    entities:
+    - code_resa: '2'
+  - slot_was_set:
+    - code_resa: '2'
+  - intent: demande_nb_pers
+    entities:
+    - num_resa: '2'
+  - action: utter_resa_ask_confirm
