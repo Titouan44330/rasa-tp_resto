@@ -27,7 +27,7 @@ responses:
   - text: "Bonjour, que puis-je faire pour vous ?"
 
   utter_start_resa_ask_date:
-  - text: "Très bien, commençons une réservation ! Vous pouvez annuler votre démarche à tout moment en écrivant "stop". Pour quelle date souhaitez-vous réserver ?"
+  - text: "Très bien, commençons une réservation ! Vous pouvez annuler votre démarche à tout moment en écrivant 'stop'. Pour quelle date souhaitez-vous réserver ?"
 
   utter_date_resa_ask_nb_pers:
   - text: "Le {date_resa}, pour combien de personnes ?"
