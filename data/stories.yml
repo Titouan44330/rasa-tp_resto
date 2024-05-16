@@ -19,7 +19,7 @@ stories:
   - intent: num_resa
   - action: utter_confirm_num_resa_add_com
   - intent: com_resa
-  - action: utter_confirm_com_resa
+  - action: utter_confirm_resa
   - intent: au_revoir
   - action: utter_au_revoir
 
