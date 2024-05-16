@@ -1,0 +1,126 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: bonjour
+  exemples: |
+    - bonjour
+    - Coucou
+    - Salut
+    - Bien le bonjour
+
+############################### story new_resa_ok/ko ############################################
+  
+- intent: demande_resa
+  examples: |
+    - je veux réserver une table
+    - je voudrais réserver une table
+    - j'aimerai manger à votre restaurant
+
+-intent: date_resa
+  examples: |
+    - Le [15/02/2024](date_resa)
+    - [15/06/2025](date_resa)
+    - [demain](date_resa)
+    - [après demain](date_resa)
+
+- intent: demande_nb_pers
+  examples: |
+    - Nous serons [2](nb_personne) personnes
+    - ça ne sera que pour [1](nb_personne) personne
+    - Nous serons [3](nb_personne)
+    - [4](nb_personne)
+
+- intent: valid_resa  
+  examples: |
+    - Oui
+    - ça me convient
+    - c'est ok
+
+- intent: nom_resa  
+  examples: |
+    - [Titouan](nom_resa)
+    - ça sera au nom de [Jean](nom_resa)
+    - Le nom pour la reservation est [Pierre](nom_resa)
+
+- intent: num_resa  
+  examples: |
+    - [0606060606](num_resa)
+    - [1021244109](num_resa)
+    - [051202](num_resa)
+    - le numéro sera [24](num_resa)
+
+- intent: com_resa  
+  examples: |
+    - [Je suis alergique aux fruits à coque](commentaire)
+    - [Je suis blindax](commentaire)
+    - [Je suis en fauteuil roulant](commentaire)
+    - [C'est l'anniversaire de mon conjoint](commentaire)
+
+- intent: au_revoir  
+  examples: |
+    - au revoir
+    - à bientôt
+    - à plus
+    - à une prochaine fois
+
+############################### END story new_resa_ok ############################################
+
+
+
+
+
+
+############################### story annule_resa ############################################
+intent: annule_resa
+  examples: |
+    - J'aimerai annuler ma reservation
+
+- intent: code_resa_annule
+  examples: |
+    - [123456](code_resa)
+    - mon code est [56535463](code_resa)
+############################### END story annule_resa ############################################
+
+
+
+
+
+
+############################### story annule_resa_ok_confirm_ok ############################################
+- intent: confirm_annule_ok
+  examples: |
+    - OUI
+    - Oui
+    - oui
+############################### END story annule_resa_ok ############################################
+
+
+
+
+
+
+
+
+############################### story annule_resa_ok_confirm_ko ############################################
+- intent: confirm_annule_ko
+  examples: |
+    - NON
+    - non
+    - Non
+############################### END story annule_resa_ok ############################################
