@@ -13,11 +13,11 @@ stories:
   - intent: demande_nb_pers
   - action: utter_resa_ask_confirm
   - intent: valid_resa
-  - action: utter_confirm_resa
+  - action: utter_confirm_resa_ask_nom
   - intent: nom_resa
-  - action: utter_nom_resa_confirm
+  - action: utter_nom_resa_confirm_ask_num
   - intent: num_resa
-  - action: utter_confirm_num_resa
+  - action: utter_confirm_num_resa_add_com
   - intent: com_resa
   - action: utter_confirm_com_resa
   - intent: au_revoir
