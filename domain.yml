@@ -74,6 +74,19 @@ responses:
   utter_confirm_modif_resa:
   - text: "Votre commentaire a bien été enregistré."
 
+  utter_info_ko:
+  - text: "Aucune réservation ne correspond à votre saisie"
+
+  utter_info_menu:
+  - text: "Le menu est : ."
+
+  utter_info_allergenes:
+  - text: "Les allergènes sont : ."
+
+  utter_lien_carte:
+  - text: "Le lien de la carte : ."
+
+
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
