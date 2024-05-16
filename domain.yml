@@ -21,6 +21,7 @@ intents:
   - info_menu
   - info_allergenes
   - info_carte
+  - confirm_annule_ko
 
 responses:
   utter_bonjour:
