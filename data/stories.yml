@@ -47,7 +47,7 @@ stories:
   - action: utter_date_resa_ask_nb_pers
   - intent: demande_nb_pers
     entities :
-      - nb_pers: "2"
+      - nb_personne: "2"
   - action: utter_resa_ko_valid
   - intent: au_revoir
   - action: utter_au_revoir

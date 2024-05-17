@@ -74,9 +74,9 @@ nlu:
 - intent: num_resa  
   examples: |
     - [0606060606](num_resa)
-    - [1021244109](num_resa)
-    - [051202](num_resa)
-    - le numéro sera [24](num_resa)
+    - [0650147894](num_resa)
+    - Mon numéro est [0784347712](num_resa)
+    - le numéro sera [0613524691](num_resa)
 
 - intent: com_resa  
   examples: |
@@ -96,7 +96,7 @@ nlu:
 - intent: code_resa_annule
   examples: |
     - [123456](code_resa)
-    - mon code est [56535463](code_resa)
+    - mon numéro est [56535463](code_resa)
 
 - intent: code_resa_ko
   examples: |
