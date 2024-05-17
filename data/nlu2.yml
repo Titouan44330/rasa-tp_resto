@@ -1,0 +1,29 @@
+version: "3.1"
+nlu:
+- intent: bonjour
+  examples: |
+    - bonjour
+- intent: demande_resa
+  examples: |
+    - réserver une table
+- intent: date_resa
+  examples: |
+    - [19/01/2002](date_resa)
+- intent: demande_nb_pers
+  examples: |
+    - [2](nb_personne) personnes
+- intent: valid_resa
+  examples: |
+    - ça me convient
+- intent: nom_resa
+  examples: |
+    - [Titouan](nom_resa)
+- intent: nlu_fallback
+  examples: |
+    - [0606060606](num_resa)
+- intent: com_resa
+  examples: |
+    - [Je suis blindax à max](commentaire)
+- intent: au_revoir
+  examples: |
+    - aurevoir
