@@ -20,7 +20,7 @@ stories:
   - slot_was_set:
     - nb_personne: '2'
   - action: utter_resa_ask_confirm
-  - intent: valid_resa
+  - intent: confirm
   - action: utter_confirm_resa_ask_nom
   - intent: nom_resa
     entities: 
@@ -28,9 +28,9 @@ stories:
   - slot_was_set:
     - nom_resa: Titouan
   - action: utter_nom_resa_confirm_ask_num
-  - intent: num_resa
+  - intent: code_resa_ok
     entities:
-      - num_resa: "123456789"
+      - code_resa: "0658791451"
   - slot_was_set:
     - num_resa: '0606060606'
   - action: utter_confirm_num_resa_add_com
@@ -39,7 +39,7 @@ stories:
       - com_resa: "Je suis alergique aux fruits à coque"
   - slot_was_set:
     - commentaire: Je suis blindax à max
-  - action: utter_confirm_resa
+  - action: confirm
   - intent: au_revoir
   - action: utter_au_revoir
 
@@ -58,7 +58,7 @@ stories:
   - intent: demande_nb_pers
     entities :
       - nb_personne: "2"
-  - action: utter_resa_ko_valid
+  - action: refuse
   - intent: au_revoir
   - action: utter_au_revoir
 
@@ -68,11 +68,11 @@ stories:
   - action: utter_bonjour
   - intent: annule_resa
   - action: utter_demande_code_resa
-  - intent: code_resa_annule
+  - intent: code_resa_ok
     entities:
-      - code_resa: "123456"
-  - action: utter_annule_ok
-  - intent: confirm_annule_ok
+      - code_resa: "0652487910"
+  - action: utter_annule
+  - intent: confirm
   - action: utter_ok_annule_resa
   - intent: au_revoir
   - action: utter_au_revoir
@@ -83,9 +83,11 @@ stories:
   - action: utter_bonjour
   - intent: annule_resa
   - action: utter_demande_code_resa
-  - intent: code_resa_annule
-  - action: utter_annule_ko
-  - intent: confirm_annule_ko
+  - intent: code_resa_ok
+    entities: 
+    - code_resa: "0652487910"
+  - action: utter_annule
+  - intent: refuse
   - action: utter_ko_annule_resa
   - intent: au_revoir
   - action: utter_au_revoir
@@ -101,19 +103,34 @@ stories:
   - intent: au_revoir
   - action: utter_au_revoir
 
-- story: info_resa_ok
+- story: info_resa_ok_modif_com_oui
   steps:
   - intent: bonjour
   - action: utter_bonjour
   - intent: info_resa
   - action: utter_demande_code_resa
   - intent: code_resa_ok
+    entities: 
+      - code_resa: "0652487910"
   - action: utter_info_ok
-  - intent: modif_com_resa
-  - action: utter_oui_non_modif
+  - intent: confirm
+  - action: utter_modif
   - intent: nouv_com_resa
   - action: utter_confirm_modif_resa
   - intent: au_revoir
+  - action: utter_au_revoir
+
+- story: info_resa_ok_modif_com_non
+  steps:
+  - intent: bonjour
+  - action: utter_bonjour
+  - intent: info_resa
+  - action: utter_demande_code_resa
+  - intent: code_resa_ok
+    entities: 
+      - code_resa: "0652487910"
+  - action: utter_info_ok
+  - intent: refuse
   - action: utter_au_revoir
 
 

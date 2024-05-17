@@ -43,20 +43,18 @@ responses:
   - text: Merci et à bientôt.
   utter_demande_code_resa:
   - text: Pouvez-vous me fournir votre code de réservation afin d'annuler votre séjour ?
-  utter_annule_ok:
+  utter_annule:
   - text: Êtes-vous sûr d'annuler votre réservation ?
   utter_ok_annule_resa:
   - text: Votre réservation {code_resa}
   utter_resa_ko_valid:
   - text: Nous n'avons pas de table disponible pour {nb_personne} le {date}
-  utter_annule_ko:
-  - text: Voulez-vous vraiment annuler ?
   utter_ko_annule_resa:
   - text: Abandon de l'annulation de votre réservation.
   utter_info_ok:
-  - text: 'Voici vos informations : .'
-  utter_oui_non_modif:
-  - text: Souhaitez vous modifier votre commentaire concernant votre réservation ?
+  - text: 'Voici vos informations : . Souhaitez vous modifier votre commentaire ? Oui/Non'
+  utter_modif:
+  - text: Veuillez saisir le nouveau commentaire
   utter_confirm_modif_resa:
   - text: Votre commentaire a bien été enregistré.
   utter_info_ko:
