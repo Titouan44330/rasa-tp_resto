@@ -6,6 +6,7 @@ digraph  {
 3 [class=active, fontsize=12, label=utter_start_resa_ask_date];
 4 [class=active, fontsize=12, label=utter_date_resa_ask_nb_pers];
 5 [class=active, fontsize=12, label=utter_resa_ask_confirm];
+<<<<<<< HEAD
 6 [class=active, fontsize=12, label=utter_confirm_resa];
 7 [class="intent dashed active", label="  ?  ", shape=rect];
 8 [class="intent active", fillcolor=lightblue, label="/bonjour", shape=rect, style=filled];
@@ -26,4 +27,42 @@ digraph  {
 10 -> 4  [class=active, key=0];
 11 -> 5  [class=active, key=0];
 12 -> 6  [class=active, key=0];
+=======
+6 [class=active, fontsize=12, label=utter_confirm_resa_ask_nom];
+7 [class=active, fontsize=12, label=utter_nom_resa_confirm_ask_num];
+8 [class=active, fontsize=12, label=utter_confirm_num_resa_add_com];
+9 [class=active, fontsize=12, label=utter_confirm_resa];
+10 [class=active, fontsize=12, label=utter_au_revoir];
+11 [class="intent dashed active", label="  ?  ", shape=rect];
+12 [class="intent active", fillcolor=lightblue, label="/bonjour", shape=rect, style=filled];
+13 [class="intent active", fillcolor=lightblue, label="/demande_resa", shape=rect, style=filled];
+14 [class="intent active", fillcolor=lightblue, label="/date_resa", shape=rect, style=filled];
+15 [class="intent active", fillcolor=lightblue, label="/demande_nb_pers", shape=rect, style=filled];
+16 [class="intent active", fillcolor=lightblue, label="/valid_resa", shape=rect, style=filled];
+17 [class="intent active", fillcolor=lightblue, label="/nom_resa", shape=rect, style=filled];
+18 [class="intent active", fillcolor=lightblue, label="/nlu_fallback", shape=rect, style=filled];
+19 [class="intent active", fillcolor=lightblue, label="/com_resa", shape=rect, style=filled];
+20 [class="intent active", fillcolor=lightblue, label="/au_revoir", shape=rect, style=filled];
+0 -> "-1"  [class="", key=NONE, label=""];
+0 -> 1  [class=active, key=NONE, label=""];
+1 -> 12  [class=active, key=0];
+2 -> 13  [class=active, key=0];
+3 -> 14  [class=active, key=0];
+4 -> 15  [class=active, key=0];
+5 -> 16  [class=active, key=0];
+6 -> 17  [class=active, key=0];
+7 -> 18  [class=active, key=0];
+8 -> 19  [class=active, key=0];
+9 -> 20  [class=active, key=0];
+10 -> 11  [class=active, key=NONE, label=""];
+12 -> 2  [class=active, key=0];
+13 -> 3  [class=active, key=0];
+14 -> 4  [class=active, key=0];
+15 -> 5  [class=active, key=0];
+16 -> 6  [class=active, key=0];
+17 -> 7  [class=active, key=0];
+18 -> 8  [class=active, key=0];
+19 -> 9  [class=active, key=0];
+20 -> 10  [class=active, key=0];
+>>>>>>> 18c575a5fdab2437e772cb41e918d83ad7b3b8f5
 }
