@@ -60,11 +60,11 @@ responses:
   utter_info_ko:
   - text: Aucune réservation ne correspond à votre saisie
   utter_info_menu:
-  - text: 'Le menu est : .'
+  - text: 'Le menu est composé d'une entrée à base de légumes de saison, nous vous proposons un tartare de boeuf en plat et une crème flambée pour conclure le repas.'
   utter_info_allergenes:
-  - text: 'Les allergènes sont : .'
+  - text: 'Les allergènes sont : lactose, arachides et viande de boeuf.'
   utter_lien_carte:
-  - text: 'Le lien de la carte : .'
+  - text: 'Le lien de la carte : lien vers la carte.'
 entities:
   - date_resa
   - nb_personne
