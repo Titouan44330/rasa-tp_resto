@@ -39,7 +39,7 @@ stories:
       - com_resa: "Je suis alergique aux fruits à coque"
   - slot_was_set:
     - commentaire: Je suis blindax à max
-  - action: confirm
+  - intent: confirm
   - intent: au_revoir
   - action: utter_au_revoir
 
@@ -58,7 +58,7 @@ stories:
   - intent: demande_nb_pers
     entities :
       - nb_personne: "2"
-  - action: refuse
+  - intent: refuse
   - intent: au_revoir
   - action: utter_au_revoir
 
@@ -99,7 +99,7 @@ stories:
   - intent: annule_resa
   - action: utter_demande_code_resa
   - intent: code_resa_ko
-  - action: utter_annule_ko
+  - action: utter_annule
   - intent: au_revoir
   - action: utter_au_revoir
 
