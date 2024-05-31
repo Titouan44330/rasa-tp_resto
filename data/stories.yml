@@ -39,8 +39,8 @@ stories:
       - com_resa: "Je suis alergique aux fruits à coque"
   - slot_was_set:
     - commentaire: Je suis blindax à max
-  - intent: au_revoir
   - action: utter_confirm_resa
+  - intent: au_revoir
   - action: utter_au_revoir
 
 - story: new_resa_ko
