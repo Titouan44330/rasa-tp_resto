@@ -155,7 +155,7 @@ nlu:
     - Pourrais je voir la carte du restaurant
     - Menu
     - Carte
-    - j'aimerai voir ka carte du resto
+    - j'aimerai voir la carte du resto
 
 ############################### END story resto_menu_jour ############################################
 

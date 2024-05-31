@@ -40,6 +40,7 @@ stories:
   - slot_was_set:
     - commentaire: Je suis blindax à max
   - intent: au_revoir
+  - action: utter_confirm_resa
   - action: utter_au_revoir
 
 - story: new_resa_ko
@@ -57,8 +58,8 @@ stories:
   - intent: demande_nb_pers
     entities :
       - nb_personne: "2"
+  - action: utter_resa_ask_confirm
   - intent: refuse
-  - intent: au_revoir
   - action: utter_au_revoir
 
 - story: annule_resa_ok_confirm_ok
