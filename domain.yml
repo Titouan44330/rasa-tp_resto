@@ -3,12 +3,9 @@ intents:
 - annule_resa
 - au_revoir
 - bonjour
-- code_resa_annule
 - code_resa_ko
 - code_resa_ok
 - com_resa
-- confirm_annule_ko
-- confirm_annule_ok
 - date_resa
 - demande_nb_pers
 - demande_resa
@@ -16,12 +13,11 @@ intents:
 - info_carte
 - info_menu
 - info_resa
-- modif_com_resa
 - nom_resa
 - nouv_com_resa
-- valid_resa
 - refuse
 - confirm
+- num_resa
 responses:
   utter_bonjour:
   - text: Bonjour, que puis-je faire pour vous ?
